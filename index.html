@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="tab">
+            <h2 class="btn" onclick="openPage(home,news,contact,about, this, 'red')">Home</h2>
+            <h2 class="btn" onclick="openPage(news,home,contact,about,this, 'green')">News</h2>
+            <h2 class="btn" onclick="openPage(contact,home,news,about,this, 'blue')">Contact</h2>
+            <h2 class="btn" onclick="openPage(about,home,news,contact,this,'orange')">About</h2>
+        </div>
+
+        <div class="fullPageTab">
+
+            <div class="tabContent" id="home">
+                <h3>Home</h3>
+                <p>Home is where the heart is..</p>
+            </div>
+
+            <div class="tabContent" id="news">
+                <h3>News</h3>
+                <p>Some news this fine day!</p>
+            </div>
+
+            <div class="tabContent" id="contact">
+                <h3>Contact</h3>
+                <p>Get in touch, or swing by for a cup of coffee.</p>
+            </div>
+
+
+            <div class="tabContent" id="about">
+                <h3>About</h3>
+                <p>Who we are and what we do.</p>
+            </div>
+
+           
+
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function openPage(a,b,c,d,x,color){
+        a.style.display = "block"
+        b.style.display = "none"
+        c.style.display = "none"
+        d.style.display = "none"
+
+        let btn = document.getElementsByClassName('btn')
+        for(let i = 0 ; i<btn.lenght; i++){
+            btn[i].backgroundColor = ""
+        }
+
+        x.style.backgroundColor = color
+
+
+
+        
+
+        }
+    </script>
+    
+</body>
+</html>
